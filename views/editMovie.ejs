@@ -1,0 +1,30 @@
+<%- include("./partials/nav.ejs")%>
+        <h1>Edit Movie</h1>
+    <form action="/movies/edit/<%= data.id %>" method="POST">
+        <label for="name">Name</label><br><br>
+        <input type="text" name="name" value="<%= data.name %>""><br><br>
+        <label for="released_year">Released Year</label><br><br>
+        <input type="date" name="released_year" value="<%= data.released_year %>""><br><br>
+        <label for="genre">Genre</label><br><br>
+        <select name="genre" id="genre_selection"><br><br>
+            <option value="action" <%= data.genre.toLowerCase() === 'action' ? 'selected' : '' %>>action</option>
+            <option value="animation" <%= data.genre.toLowerCase() === 'animation' ? 'selected' : '' %>>animation</option>
+            <option value="comedy" <%= data.genre.toLowerCase() === 'comedy' ? 'selected' : '' %>>comedy</option>
+            <option value="drama" <%= data.genre.toLowerCase() === 'drama' ? 'selected' : '' %>>drama</option>
+            <option value="horor" <%= data.genre.toLowerCase() === 'horor' ? 'selected' : '' %>>horor</option>
+            <option value="thriller" <%= data.genre.toLowerCase() === 'thriller' ? 'selected' : '' %>>thriller</option>
+            <option value="fantasy" <%= data.genre.toLowerCase() === 'fantasy' ? 'selected' : '' %>>fantasy</option>
+            <option value="war" <%= data.genre.toLowerCase() === 'war' ? 'selected' : '' %>>war</option>
+        </select><br><br>
+        <select name="ProductionHouseId">
+            <option value="1" <%= data.ProductionHouse.id === 1 ? 'selected' : '' %>>Walt Disney Studios</option>
+            <option value="2" <%= data.ProductionHouse.id === 2 ? 'selected' : '' %>>Pixar</option>
+            <option value="3" <%= data.ProductionHouse.id === 3 ? 'selected' : '' %>>Warner Bros</option>
+            <option value="4" <%= data.ProductionHouse.id === 4 ? 'selected' : '' %>>Universal Picture</option>
+            <option value="5" <%= data.ProductionHouse.id === 5 ? 'selected' : '' %>>Paramount Picture</option>
+        </select><br><br>
+        <input type="submit" value="save">
+    </form>
+    <a href="/movies"><button>cancel</button></a>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<%- include("./partials/nav.ejs")%>
+        <h1>Production Houses</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>Headquarters</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i = 0; i < data.length; i++){ %>
+
+                <tr>
+                    <td><%= data[i].name_prodHouse%></td>
+                    <td><%= data[i].headquarters %></td>
+                </tr>
+
+            <% }%>
+        </tbody>
+    </table>
+</body>
+</html>

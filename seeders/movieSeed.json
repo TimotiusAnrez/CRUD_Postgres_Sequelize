@@ -1,0 +1,32 @@
+[
+    {
+    "name": "John Wick",
+    "released_year": "2013-12-12",
+    "genre": "action",
+    "ProductionHouseId":1
+    },
+    {
+    "name": "John Wick",
+    "released_year": "2013",
+    "genre": "action",
+    "ProductionHouseId":2
+    },
+    {
+    "name": "LaLaLand",
+    "released_year": "2018",
+    "genre": "drama",
+    "ProductionHouseId":1
+    },
+    {
+    "name": "soul",
+    "released_year": "2020",
+    "genre": "animation",
+    "ProductionHouseId":1
+    },
+    {
+    "name": "Saving Private Ryan",
+    "released_year": "1996",
+    "genre": "war",
+    "ProductionHouseId":1
+    }
+]

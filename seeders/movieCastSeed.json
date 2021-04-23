@@ -1,0 +1,21 @@
+[{
+    "role":"lead actor",
+    "movieId":1,
+    "castId":1
+},{
+    "role":"lead actor",
+    "movieId":2,
+    "castId":2
+},{
+    "role":"lead actor",
+    "movieId":3,
+    "castId":3
+},{
+    "role":"lead actor",
+    "movieId":4,
+    "castId":4
+},{
+    "role":"lead actor",
+    "movieId":5,
+    "castId":5
+}]

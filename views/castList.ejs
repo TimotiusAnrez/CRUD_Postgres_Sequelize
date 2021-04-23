@@ -1,0 +1,35 @@
+<%- include("./partials/nav.ejs")%>
+        <h1>Cast List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Full name</th>
+                <th>Phone Number</th>
+                <th>Birth Year</th>
+                <th>Gender</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i = 0; i < data.length; i++){ %>
+
+                <tr>
+                    <td><%= data[i].first_name%> <%= data[i].last_name %></td>
+                    <td><%= data[i].phone_number %></td>
+                    <td><%= data[i].birth_year %></td>
+                    <td><%= data[i].gender %></td>
+                    <td>
+                        <a href="/casts/edit/<%= data[i].id %>"><button>edit</button></a>
+                        <a href="/casts/delete/<%= data[i].id %>"><button>delete</button></a>
+                        <a href="/casts/see/<%= data[i].id %>"><button>see movie</button></a>
+                    </td>
+                </tr>
+
+
+
+            <% }%>
+        </tbody>
+    </table>
+    <a href="/casts/add"><button>Add Casts</button></a>
+</body>
+</html>

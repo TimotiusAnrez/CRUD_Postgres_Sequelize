@@ -1,0 +1,32 @@
+<%- include("./partials/nav.ejs")%>
+        <h1>Add Movie</h1>
+        <h3><%= error.msg %></h3>
+    <form action="/movies/add" method="POST">
+        <label for="name">Name</label><br><br>
+        <input type="text" name="name"><br><br>
+        <label for="released_year">Released Year</label><br><br>
+        <input type="text" name="released_year"><br><br>
+        <label for="genre">Genre</label><br><br>
+        <select name="genre" id="genre_selection"><br><br>
+            <option value="action">action</option>
+            <option value="animation">animation</option>
+            <option value="comedy">comedy</option>
+            <option value="drama">drama</option>
+            <option value="horor">horor</option>
+            <option value="thriller">thriller</option>
+            <option value="fantasy">fantasy</option>
+            <option value="war">war</option>
+        </select><br><br>
+        <label for="production house">Production House</label><br><br>
+        <select name="ProductionHouseId">
+            <option value="1">Walt Disney Studios</option>
+            <option value="2">Pixar</option>
+            <option value="3">Warner Bros</option>
+            <option value="4">Universal Picture</option>
+            <option value="5">Paramount Picture</option>
+        </select><br><br>
+        <input type="submit" value="save">
+    </form>
+    <a href="/movies"><button>cancel</button></a>
+</body>
+</html>

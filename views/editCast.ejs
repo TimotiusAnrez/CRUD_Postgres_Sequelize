@@ -1,0 +1,20 @@
+<%- include("./partials/nav.ejs")%>
+
+<h1>Edit Cast</h1>
+    <form action="/casts/edit/<%= data.id %>" method="POST">
+        <label for="first_name">First Name</label><br><br>
+        <input type="text" name="first_name" value="<%= data.first_name %>"><br><br>
+        <label for="last_name">Last Name</label><br><br>
+        <input type="text" name="last_name" value="<%= data.last_name %>"><br><br>
+        <label for="phone_number">Phone Number</label><br><br>
+        <input type="text" name="phone_number" value="<%= data.phone_number %>"><br><br>
+        <label for="birth_year">Birth Year</label><br><br>
+        <input type="text" name="birth_year" value="<%= data.birth_year %>"><br><br>
+        <label for="gender">Gender</label><br><br>
+        <input type="radio" name="gender" id="gender" value="<%= (data.gender === 'male') ? 'selected' : ' ' %>"><label for="male">male</label><br>
+        <input type="radio" name="gender" id="gender" value="<%= (data.gender === 'female') ? 'selected' : ' ' %>"><label for="female">female</label><br><br>
+        <input type="submit" value="save">
+    </form>
+    <a href="/casts"><button>cancel</button></a>
+</body>
+</html>

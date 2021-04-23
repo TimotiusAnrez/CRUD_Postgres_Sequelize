@@ -1,0 +1,32 @@
+<%- include("./partials/nav.ejs")%>
+        <h1>Movie List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Movie</th>
+                <th>Released Year</th>
+                <th>Genre</th>
+                <th>Production House</th> 
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i = 0; i < data.length; i++){ %>
+
+                <tr>
+                    <td><%= data[i].name%></td>
+                    <td><%= data[i].released_year %></td>
+                    <td><%= data[i].genre %></td>
+                    <td><%= data[i].ProductionHouse.name_prodHouse %></td>
+                    <td>
+                        <a href="/movies/edit/<%= data[i].id %>"><button>edit</button></a>
+                        <a href="/movies/delete/<%= data[i].id %>"><button>delete</button></a>
+                        <a href="/movies/addTo/cast/<%= data[i].id %>"><button>add cast</button></a>
+                    </td>
+                </tr>
+            <% }%>
+        </tbody>
+    </table>
+    <a href="/movies/add"><button>Add Movie</button></a>
+</body>
+</html>

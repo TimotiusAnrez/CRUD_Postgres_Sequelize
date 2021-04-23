@@ -1,0 +1,28 @@
+<%- include("./partials/nav.ejs")%>
+
+<h1>Add Cast</h1>
+<h1><%= data.name %></h1>
+    
+<form action="/movies/addTo/cast" method="POST">
+        <label for="castList"></label>
+        <select name="castList">
+            <%= data.Casts.forEach(element => { %>                    
+            <option value="<%= element.id %>"> <%= data[i].first_name %><%= data[i].last_name %></option>
+            <%= }); %>
+        </select>
+        <input type="submit">   
+    </form>
+    
+    <a href="/casts"><button>cancel</button></a>
+
+    <table>
+        <%= data.Casts.forEach(element => { %>                    
+            <tr>
+                <td><%= element.first_name %> <%= element.last_name %></td>
+                <td><%= element.role</td>
+            </tr>
+        <%= }); %>
+    </table>
+
+</body>
+</html>

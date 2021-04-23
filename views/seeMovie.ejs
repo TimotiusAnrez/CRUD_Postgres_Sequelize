@@ -1,0 +1,29 @@
+<%- include("./partials/nav.ejs")%>
+        <h1><%= data.name %></h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Movie</th>
+                <th>Released Year</th>
+                <th>Age when released</th>
+                <th>role</th> 
+            </tr>
+        </thead>
+        <tbody>
+
+            <%= data.Movie.forEach(element => { %>                    
+                <tr>
+                    <td><%= element.name %></td>
+                    <td><%= element.released_year %></td>
+                    <td><%= Number(element.released_year[0][1][2][3]) - data.birth_year</td>
+                    <td><%= data.role</td>
+                </tr>
+            <%= }); %>
+            
+
+
+        </tbody>
+    </table>
+    <a href="/movies/add"><button>Add Movie</button></a>
+</body>
+</html>
